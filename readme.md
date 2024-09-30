@@ -11,6 +11,7 @@ Here the datasets are loaded, pre-processed and converted into NumPy arrays. Nex
 # Part B
 
 In part B, a loss function is defined that takes the true labels and predicted probabilities, and returns the loss value. Defining an appropriate loss function is essential for good model performance. For this example, a cross-entropy loss function is used. The formula is given by: 
+            
             ![alt text](loss-function-1.png)           
 
 where: 
@@ -21,9 +22,11 @@ where:
 This formulation of the cross-entropy loss is valid for binary labels in {0, 1}.This is why we need to convert the labels accordingly. Since yi ∈ {0, 1} and 0 < pi < 1, the loss function is always positive.
 
 probability pi is calculated by the model prediction procedure as follows: 
+            
             ![alt text](loss-function(2).png)
 
 However, when using the cross-entropy loss function, we need to convert these predictions to probabilities pi ∈ (0, 1). This is done using the non-linear sigmoid activation function:
+            
             ![alt text](loss-function(3).png)
 
 For optimization, stochastic gradient descent (SGD) with momemtum is utilized, with learning rate of 0.01
