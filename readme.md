@@ -16,11 +16,12 @@ In part B, a loss function is defined that takes the true labels and predicted p
  ![alt text](loss-function-1-1.png)     
 
 
-where: 
+where:
+ 
     • N is the number of data points
 
     • yi is the true label of the i-th data point
-    
+
     • pi is the predicted probability for the i-th data point
 
 This formulation of the cross-entropy loss is valid for binary labels in {0, 1}.This is why we need to convert the labels accordingly. Since yi ∈ {0, 1} and 0 < pi < 1, the loss function is always positive.
